@@ -7,10 +7,10 @@ class GoogleResultsPage(BasePage, BaseResult):
 
     def __init__(self, browser):
         super().__init__(browser)
-        self.result = BaseResult(browser)
+        self.result_page = BaseResult(browser)
 
     def __getattr__(self, name):
-        return getattr(self.result, name)
+        return getattr(self.result_page, name)
 
     def results_count(self, phrase: str) -> int:
         xpath = f"//*[@id='search']/div/div/div//*[contains(text(),'{phrase}')]"

@@ -7,10 +7,10 @@ class DuckDuckGoResultsPage(BasePage):
 
     def __init__(self, browser):
         super().__init__(browser)
-        self.result = BaseResult(browser)
+        self.result_page = BaseResult(browser)
 
     def __getattr__(self, name):
-        return getattr(self.result, name)
+        return getattr(self.result_page, name)
 
     def results_count(self, phrase) -> int:
         xpath = f"//*[@id='react-layout']//li//*[contains(text(),'{phrase}')]"
