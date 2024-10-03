@@ -1,6 +1,6 @@
-# Python + Selenium / Page Object Model
+# Python + PyTest + Selenium / Page Object Model
 
-This project demonstrates how to use Python and Selenium with the Page Object Model (POM) design pattern. The Page Object Model helps in reducing code duplication and improving code maintainability, especially when working with multiple web pages in automated tests.
+This project demonstrates how to use Python, PyTest, and Selenium with the Page Object Model (POM) design pattern. The Page Object Model helps in reducing code duplication and improving code maintainability, especially when working with multiple web pages in automated tests.
 
 ## Project Structure
 
@@ -39,7 +39,7 @@ pytest
 
 To execute tests in parallel include the `-n {tests}` as an argument
 ```bash
-pytest -n 2
+pytest -n 4
 ```
 
 

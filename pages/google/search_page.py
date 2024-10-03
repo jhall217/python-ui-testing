@@ -8,6 +8,5 @@ class GoogleSearchPage(BaseSearch):
     URL = 'https://google.com/'
 
     def search(self, input_text: str) -> GoogleResultsPage:
-        search_input = self.browser.find_element(*self.SEARCH_INPUT)
-        search_input.send_keys(input_text + Keys.RETURN)
+        super().search(input_text)
         return GoogleResultsPage(self.browser)

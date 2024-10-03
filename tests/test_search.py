@@ -1,5 +1,6 @@
 from pages.duckduckgo.search_page import DuckDuckGoSearchPage
 from pages.google.search_page import GoogleSearchPage
+from tests.conftest import browser
 
 
 def test_basic_duckduckgo_search(browser):
