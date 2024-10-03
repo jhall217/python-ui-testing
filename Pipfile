@@ -1,0 +1,7 @@
+[packages]
+requests = "*"
+selenium = "*"
+pytest = "*"
+
+[requires]
+python_version = "*"

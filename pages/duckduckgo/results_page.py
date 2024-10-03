@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-
 from pages.base.base_page import BasePage
 
 
@@ -9,8 +8,8 @@ class DuckDuckGoResultsPage(BasePage):
     SEARCH_PHRASE = 'cat'
 
     def results_count(self, SEARCH_PHRASE=None) -> int:
-        xpath = f"//div[@id='links']//*[contains(text(), '{SEARCH_PHRASE}')]"
-        elements = self.browser.find_elements(xpath)
+        xpath =f"//*[@id='react-layout']//li//*[contains(text(),'{SEARCH_PHRASE}')]"
+        elements = self.browser.find_elements(By.XPATH, xpath)
         return len(elements)
 
     def search_phrase(self) -> str:

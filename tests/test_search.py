@@ -1,5 +1,5 @@
-from pages.duckduckgo.duck_duck_search_page import DuckDuckGoSearchPage
-from pages.google.google_search_page import GoogleSearchPage
+from pages.duckduckgo.search_page import DuckDuckGoSearchPage
+from pages.google.search_page import GoogleSearchPage
 
 
 def test_basic_duckduckgo_search(browser):
@@ -13,6 +13,7 @@ def test_basic_duckduckgo_search(browser):
     result_page = search_page.search(search_phrase)
 
     assert search_phrase == result_page.search_phrase()
+    assert result_page.results_count(search_phrase) > 0
 
 
 def test_load_google_search(browser):

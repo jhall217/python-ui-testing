@@ -2,7 +2,7 @@ from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
 from pages.base.base_search import BaseSearch
-from pages.duckduckgo.duck_duck_results_page import DuckDuckGoResultsPage
+from pages.duckduckgo.results_page import DuckDuckGoResultsPage
 
 
 class DuckDuckGoSearchPage(BaseSearch):
