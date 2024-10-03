@@ -12,6 +12,7 @@ def test_basic_duckduckgo_search(browser):
     search_phrase = 'panda'
     result_page = search_page.search(search_phrase)
 
+    assert search_phrase in result_page.title()
     assert search_phrase == result_page.search_phrase()
     assert result_page.results_count(search_phrase) > 0
 
@@ -19,4 +20,12 @@ def test_basic_duckduckgo_search(browser):
 def test_load_google_search(browser):
     search_page = GoogleSearchPage(browser)
     search_page.load()
+
     assert 'Google' in search_page.title()
+
+    search_phrase = 'panda'
+    result_page = search_page.search(search_phrase)
+
+    assert search_phrase in result_page.title()
+    assert search_phrase == result_page.search_phrase()
+    assert result_page.results_count(search_phrase) > 0
