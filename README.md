@@ -1,0 +1,1 @@
+This is a simple project demonstrating how to use Python and Selenium using the Page Object Model design pattern
