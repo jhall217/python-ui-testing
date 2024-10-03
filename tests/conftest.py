@@ -9,11 +9,13 @@ def create_chrome_options():
     options = ChromeOptions()
     options.headless = True
     options.add_argument("--headless=new")
+    options.add_argument("--window-position=-2400,-2400")
+
     return options
 
 
 def create_webdriver(options):
-    driver = webdriver.Chrome(options=options)  # Use the correct webdriver.Chrome
+    driver = webdriver.Chrome(options=options)
     driver.implicitly_wait(IMPLICIT_WAIT_TIME)
     return driver
 
