@@ -1,8 +1,10 @@
+import pytest
+
 from pages.duckduckgo.search_page import DuckDuckGoSearchPage
 from pages.google.search_page import GoogleSearchPage
 from tests.conftest import browser
 
-
+@pytest.mark.duckduckgo
 def test_basic_duckduckgo_search(browser):
     search_page = DuckDuckGoSearchPage(browser)
 
@@ -18,6 +20,7 @@ def test_basic_duckduckgo_search(browser):
     assert result_page.results_count(search_phrase) > 0
 
 
+@pytest.mark.google
 def test_load_google_search(browser):
     search_page = GoogleSearchPage(browser)
     search_page.load()

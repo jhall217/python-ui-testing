@@ -5,6 +5,8 @@ from pages.google.search_page import GoogleSearchPage
 from tests.conftest import browser
 
 
+@pytest.mark.duckduckgo
+@pytest.mark.google
 @pytest.mark.parametrize("page, title, search_phrase", [
     (DuckDuckGoSearchPage, 'DuckDuckGo', 'panda'),
     (GoogleSearchPage, 'Google', 'python'),
